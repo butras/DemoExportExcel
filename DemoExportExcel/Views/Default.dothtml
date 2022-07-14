@@ -1,0 +1,23 @@
+﻿@viewModel DemoExportExcel.ViewModels.DefaultViewModel, DemoExportExcel
+@masterPage Views/MasterPage.dotmaster
+<dot:Content ContentPlaceHolderID="MainContent">
+    <h1>Demo export</h1>
+    <bp:GridView DataSource="{value: UserGridView}" ID="UserGridView" FilterPlacement="Popup">
+        <Columns>
+            <bp:GridViewTextColumn Value="{value: UserId}" HeaderText="ID" AllowSorting="true" AllowFiltering="true" />
+            <bp:GridViewTextColumn Value="{value: Name}" HeaderText="Name" AllowSorting="true" AllowFiltering="true" />
+            <bp:GridViewTemplateColumn HeaderText="Role" ColumnName="Role">
+                <dot:Repeater DataSource="{value: Roles}" RenderWrapperTag="false">
+                    <ItemTemplate>
+                        <dot:Literal Text="{value: RoleName}" />
+                    </ItemTemplate>
+                    <SeparatorTemplate>
+                        <br />
+                    </SeparatorTemplate>
+                </dot:Repeater>
+            </bp:GridViewTemplateColumn>
+        </Columns>
+    </bp:GridView>
+    <br />
+    <bp:Button Click="{command: ExportGridView()}" Text="Exportovat" />
+</dot:Content>

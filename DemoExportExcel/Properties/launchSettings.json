@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DemoExportExcel": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:22067;http://localhost:22068"
+    }
+  }
+}

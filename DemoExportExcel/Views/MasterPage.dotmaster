@@ -1,0 +1,12 @@
+﻿@viewModel DemoExportExcel.ViewModels.MasterPageViewModel, DemoExportExcel
+<!DOCTYPE html>
+
+<html lang="cs" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DemoExportExcel</title>    
+</head>
+<body>
+    <dot:ContentPlaceHolder ID="MainContent" />
+</body>
+</html>
